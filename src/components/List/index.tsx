@@ -1,22 +1,23 @@
 import { IItems, IList } from "./interface"
+import ListMessage from "components/Warning"
 
 function List(props: IList) {
 
-  const { items } = props
+  const { items, loading } = props
 
-  return (
+  if (loading) return <ListMessage message="Carregando items ⏳" />
+  else if (!loading && items.length === 0) return <ListMessage message="Nenhum item encontrado 😕" />
+  else return (
     <div id="component-list">
       <ul className="list-group">
-        {items ? items.map((item: IItems) => (
+        {items?.map((item: IItems) => (
           <li className="list-group-item">
             {item.name}
             {item.description}
           </li>
         ))
-          : <h4 style={{ fontWeight: 300 }} className="text-center">Nenhum item encontrado 😕 </h4>
         }
       </ul>
-
     </div >
   )
 }

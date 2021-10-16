@@ -6,20 +6,6 @@ function Context() {
 
   const { item, setItem, setUpdateItem, isLoading } = useContext(ItemContext)
 
-
-
-  useEffect(() => {
-    function loadContexts() {
-      console.log("context page debug", item)
-    }
-    loadContexts()
-
-  }, [item])
-
-
-
-  console.log("debug useContext", item)
-
   if (isLoading) {
     return <p>Loading Items</p>
   }

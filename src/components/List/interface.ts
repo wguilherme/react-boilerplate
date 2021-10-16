@@ -4,6 +4,7 @@ export interface IList {
   name?: string,
   type?: string,
   route?: string
+  loading?: any,
   items: Array<IItems>
 }
 
