@@ -2,13 +2,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
 import 'normalize.css';
 import "./styles/setup.scss"
 
+import { ItemProvider } from './context/Item';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ItemProvider>
+      <App />
+    </ItemProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

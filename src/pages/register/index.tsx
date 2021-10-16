@@ -1,12 +1,10 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 
 function Register() {
 
-
-
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
-  const onSubmit = data => console.log(data)
+
+  const onSubmit = (data: any) => console.log(data)
 
   console.log(watch("example"))
 
@@ -19,7 +17,6 @@ function Register() {
           {errors.exampleRequired && <span>This field is required</span>}
           <input type="submit" />
         </form>
-        <button>Oi</button>
       </div>
     </div>
   )
