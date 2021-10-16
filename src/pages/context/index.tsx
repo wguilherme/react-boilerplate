@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./styles.css"
-import { ItemContext } from '../../context/Item/index';
+import { ItemContext } from 'context/Item/index';
 
 function Context() {
 
