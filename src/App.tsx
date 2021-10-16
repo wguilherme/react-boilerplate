@@ -6,8 +6,11 @@ import {
 } from "react-router-dom";
 
 // pages
-import Register from './pages/register';
-import Context from './pages/context';
+import Register from 'pages/register';
+import Context from 'pages/context';
+import Login from 'pages/login';
+
+import Item from 'pages/item';
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Register} />
         <Route exact path="/context" component={Context} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/item" component={Item} />
       </Switch>
     </BrowserRouter>
   )

@@ -3,20 +3,21 @@ import IInput from "./inteface"
 
 function Input(props: IInput) {
 
-  const { name, label, placeholder, type = "string" } = props
+  const { name, label, placeholder, type = "string", autoComplete } = props
 
   return (
 
-    <div className="form-floating">
+    <div id="component-input" className="form-floating mb-4">
       <input type={type}
         id={name}
-        value={name}
         name={name}
         className="form-control"
         placeholder={placeholder}
+        autoComplete={autoComplete == "off" ? "nope" : autoComplete
+        }
       />
-      <label htmlFor="floatingInputValue">Input with value</label>
-    </div>
+      < label htmlFor="floatingInputValue" > Input with value</label >
+    </div >
 
   )
 

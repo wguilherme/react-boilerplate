@@ -3,4 +3,5 @@ export default interface Input {
   label?: string,
   type?: string,
   placeholder?: string,
+  autoComplete?: string
 }
