@@ -13,10 +13,10 @@ function Input(props: IInput) {
         name={name}
         className="form-control"
         placeholder={placeholder}
-        autoComplete={autoComplete == "off" ? "nope" : autoComplete
+        autoComplete={autoComplete === "off" ? "nope" : autoComplete
         }
       />
-      < label htmlFor="floatingInputValue" > Input with value</label >
+      < label htmlFor="floatingInputValue" > {label}</label>
     </div >
 
   )

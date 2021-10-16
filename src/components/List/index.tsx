@@ -1,18 +1,24 @@
-function List(props: any) {
+import { IItems, IList } from "./interface"
+
+function List(props: IList) {
+
+  const { items } = props
 
   return (
     <div id="component-list">
       <ul className="list-group">
-        {props?.items ? props.items.map((item: any) => (
-          < li className="list-group-item" > An item</li>
+        {items ? items.map((item: IItems) => (
+          <li className="list-group-item">
+            {item.name}
+            {item.description}
+          </li>
         ))
-          : <p>Nenhum item encontrado</p>
+          : <h4 style={{ fontWeight: 300 }} className="text-center">Nenhum item encontrado 😕 </h4>
         }
       </ul>
 
     </div >
   )
-
 }
 
 export default List
