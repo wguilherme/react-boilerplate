@@ -19,6 +19,7 @@ function Register() {
           {errors.exampleRequired && <span>This field is required</span>}
           <input type="submit" />
         </form>
+        <button>Oi</button>
       </div>
     </div>
   )
