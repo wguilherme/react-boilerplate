@@ -7,7 +7,7 @@ import {
 
 // pages
 import Register from './pages/register';
-import Context from './pages/contextPage';
+import Context from './pages/context';
 
 function App() {
   return (
