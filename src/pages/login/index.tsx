@@ -9,8 +9,13 @@ import api from "services/api";
 import { useHistory } from 'react-router-dom';
 
 // import ILogin from "./interface"
+import Toast from '../../components/Toast/index';
+import { useState } from "react";
 
 function Login() {
+
+  const [showToast, setShowToast] = useState(false);
+  const toggleToast = () => setShowToast(!showToast);
 
   const router = useHistory()
 
@@ -19,18 +24,10 @@ function Login() {
 
     try {
       const res: any = await api.post("/user/login", credentials)
-
-
       await auth.onSignIn(res.data.token)
 
-      const loggedUser: any = await auth.getUser()
-
+      setShowToast(true)
       router.push("/dashboard")
-
-      alert("Você logou como" + loggedUser?.name)
-
-
-
     } catch (error) {
       // 
       console.log("Handle login error", error)
@@ -40,24 +37,15 @@ function Login() {
     }
   }
 
-
-
-
   const onSubmit = (cretentials: any) => handleLogin(cretentials)
   // console.log(watch("email"))
-
-
-
   return (
     <div id="page-login" className="w-100 h-100">
       <div className="form-container">
-
         <h1>Seja bem vindo (a)</h1>
         <h2>Acesse a plataforma com seu login e senha</h2>
 
-
         <Form onSubmit={onSubmit} >
-
 
           <Input
             name="email"
@@ -83,13 +71,10 @@ function Login() {
               Login
             </button>
           </div>
-
         </Form>
       </div>
+      <Toast show={showToast} onClose={toggleToast} />
     </div>
   )
 }
-
 export default Login
-
-
