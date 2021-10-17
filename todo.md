@@ -5,7 +5,10 @@
 [x] add api service
 [x] add localstorage service
 [x] add local storage auth service
-[] add login page
+[x] add login page
+[x] add reusable form with useForm
+[x] add reusable list of items
+[] add reusable list of items dynamic passing route url
 [] add register page
 [] add register/login/logout flow
 [] add restrict pages based on authentication
