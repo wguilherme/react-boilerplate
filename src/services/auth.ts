@@ -14,13 +14,20 @@ async function isSignedIn() {
 }
 
 async function getUser() {
+
+  console.log("getuser 1")
   const token = await localStorage.getItem('token')
 
   if (!token) return false
 
+  console.log("getuser 2", token)
   const config = { headers: { Authorization: `Bearer ${token}` } };
 
+
+
   const res = await api.get('/user/me', config)
+
+  console.log("debug res", res.data)
 
   return res.data
 }

@@ -4,15 +4,46 @@ import { useForm } from "react-hook-form";
 import Input from 'components/Input/index';
 import { Button } from "components/Button";
 import Form from "components/Form/useForm";
+import auth from "services/auth";
+import api from "services/api";
+import { useHistory } from 'react-router-dom';
+
 // import ILogin from "./interface"
 
 function Login() {
 
+  const router = useHistory()
+
+  const handleLogin = async (credentials: string) => {
+
+
+    try {
+      const res: any = await api.post("/user/login", credentials)
+
+
+      await auth.onSignIn(res.data.token)
+
+      const loggedUser: any = await auth.getUser()
+
+      router.push("/dashboard")
+
+      alert("Você logou como" + loggedUser?.name)
+
+
+
+    } catch (error) {
+      // 
+      console.log("Handle login error", error)
+
+      return error
+
+    }
+  }
 
 
 
 
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = (cretentials: any) => handleLogin(cretentials)
   // console.log(watch("email"))
 
 
@@ -29,21 +60,20 @@ function Login() {
 
 
           <Input
-            name="Email"
+            name="email"
             autoComplete="off"
             type="text"
             label="Digite seu e-mail"
             placeholder="Digite seu e-mail"
           />
 
-          {/* <Input
-            register={register}
-            name="Password"
+          <Input
+            name="password"
             autoComplete="off"
             type="password"
             label="Digite sua senha"
             placeholder="Digite sua senha"
-          /> */}
+          />
 
           <div className="d-grid gap-2 mx-auto ">
             <button
