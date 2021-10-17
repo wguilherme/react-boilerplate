@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 // import 'normalize.css'; // not needed becaseu Bootstrap already have a normalize
 
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import "./styles/setup.scss"
 
 import { ItemProvider } from './context/Item';
