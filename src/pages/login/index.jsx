@@ -3,16 +3,17 @@ import { useForm } from "react-hook-form";
 
 import Input from 'components/Input/index';
 import { Button } from "components/Button";
+import Form from "components/Form/useForm";
 // import ILogin from "./interface"
 
 function Login() {
 
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm()
 
-  const onSubmit = (data: any) => console.log(data)
 
-  console.log(watch("example"))
+
+  const onSubmit = (data) => console.log(data);
+  // console.log(watch("email"))
 
 
 
@@ -23,7 +24,8 @@ function Login() {
         <h1>Seja bem vindo (a)</h1>
         <h2>Acesse a plataforma com seu login e senha</h2>
 
-        <form action="" className="mt-3" autoComplete="off!!">
+
+        <Form onSubmit={onSubmit} >
 
 
           <Input
@@ -34,22 +36,25 @@ function Login() {
             placeholder="Digite seu e-mail"
           />
 
-          <Input
+          {/* <Input
+            register={register}
             name="Password"
             autoComplete="off"
             type="password"
             label="Digite sua senha"
             placeholder="Digite sua senha"
-          />
+          /> */}
 
-          {/* padding-left: 2.5rem; padding-right: 2.5rem; */}
           <div className="d-grid gap-2 mx-auto ">
-            <button type="button" className="btn btn-primary btn-lg"
-            >Login</button>
-
+            <button
+              type="submit"
+              className="btn btn-primary btn-lg"
+            >
+              Login
+            </button>
           </div>
 
-        </form>
+        </Form>
       </div>
     </div>
   )

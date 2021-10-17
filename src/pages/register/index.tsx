@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 
 function Register() {
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm()
+  const { register, handleSubmit, watch, formState: { errors } } = useForm({})
 
   const onSubmit = (data: any) => console.log(data)
 
