@@ -14,14 +14,16 @@ function Login() {
 
   console.log(watch("example"))
 
+
+
   return (
-    <div id="page-login" className="container mt-5">
+    <div id="page-login" className="w-100 h-100">
       <div className="form-container">
 
         <h1>Seja bem vindo!</h1>
         <h2>Acesse a plataforma com seu login e senha</h2>
 
-        <form action="" className="mt-4 shadow" autoComplete="off">
+        <form action="" autoComplete="off!!">
 
 
           <Input
