@@ -2,7 +2,7 @@
 import React from "react"
 import { useForm } from "react-hook-form";
 
-const Form = ({ defaultValues, children, onSubmit }) => {
+const Form: any = ({ defaultValues, children, onSubmit }: any) => {
   const { handleSubmit, register } = useForm({ defaultValues });
 
   return (

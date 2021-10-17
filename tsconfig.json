@@ -24,6 +24,6 @@
   "include": [
     "src",
     "src/context/Item/index.tsx",
-    "src/pages/register/index.jsx"
+    "src/pages/register/index.tsx"
   ]
 }
