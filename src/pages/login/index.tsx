@@ -20,10 +20,10 @@ function Login() {
     <div id="page-login" className="w-100 h-100">
       <div className="form-container">
 
-        <h1>Seja bem vindo!</h1>
+        <h1>Seja bem vindo (a)</h1>
         <h2>Acesse a plataforma com seu login e senha</h2>
 
-        <form action="" autoComplete="off!!">
+        <form action="" className="mt-3" autoComplete="off!!">
 
 
           <Input
