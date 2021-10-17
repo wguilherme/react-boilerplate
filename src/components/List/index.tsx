@@ -11,7 +11,7 @@ function List(props: IList) {
     <div id="component-list">
       <ul className="list-group">
         {items?.map((item: IItems) => (
-          <li className="list-group-item">
+          <li key={item._id} className="list-group-item">
             {item.name}
             {item.description}
           </li>

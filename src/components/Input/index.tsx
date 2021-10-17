@@ -16,7 +16,7 @@ function Input(props: IInput) {
         autoComplete={autoComplete === "off" ? "nope" : autoComplete
         }
       />
-      < label htmlFor="floatingInputValue" > {label}</label>
+      <label htmlFor={name} > {label}</label>
     </div >
 
   )

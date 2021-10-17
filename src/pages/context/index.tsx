@@ -1,10 +1,12 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import "./styles.css"
 import { ItemContext } from 'context/Item/index';
 
 function Context() {
 
-  const { item, setItem, setUpdateItem, isLoading } = useContext(ItemContext)
+  const { item, isLoading } = useContext(ItemContext)
+
+  console.log(item)
 
   if (isLoading) {
     return <p>Loading Items</p>

@@ -9,6 +9,7 @@ export interface IList {
 }
 
 export interface IItems {
+  _id?: string,
   name?: string,
   description?: string,
   image?: string,

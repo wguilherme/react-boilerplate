@@ -1,6 +1,8 @@
 import "./styles.scss"
 import { useForm } from "react-hook-form";
+
 import Input from 'components/Input/index';
+import { Button } from "components/Button";
 // import ILogin from "./interface"
 
 function Login() {
@@ -13,15 +15,40 @@ function Login() {
   console.log(watch("example"))
 
   return (
-    <div className="container mt-5">
-      <form action="" autoComplete="off">
+    <div id="page-login" className="container mt-5">
+      <div className="form-container">
+
+        <h1>Seja bem vindo!</h1>
+        <h2>Acesse a plataforma com seu login e senha</h2>
+
+        <form action="" className="mt-4 shadow" autoComplete="off">
 
 
-        <Input autoComplete="off" name="Name" type="text" placeholder="Type your name" />
-        <Input autoComplete="off" name="Name" type="text" placeholder="Type your name" />
-        <Input autoComplete="off" name="Name" type="text" placeholder="Type your name" />
-        <Input autoComplete="off" name="Name" type="text" placeholder="Type your name" />
-      </form>
+          <Input
+            name="Email"
+            autoComplete="off"
+            type="text"
+            label="Digite seu e-mail"
+            placeholder="Digite seu e-mail"
+          />
+
+          <Input
+            name="Password"
+            autoComplete="off"
+            type="password"
+            label="Digite sua senha"
+            placeholder="Digite sua senha"
+          />
+
+          {/* padding-left: 2.5rem; padding-right: 2.5rem; */}
+          <div className="d-grid gap-2 mx-auto ">
+            <button type="button" className="btn btn-primary btn-lg"
+            >Login</button>
+
+          </div>
+
+        </form>
+      </div>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 export default interface Input {
-  name: string,
+  name?: string,
   label?: string,
   type?: string,
   placeholder?: string,
