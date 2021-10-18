@@ -16,7 +16,7 @@ const FormWithFields: any = (props: any) => {
       {fields && fields.map((field: any) => <Input {...field}></Input>)}
     </Form>
 
-    <Button submit={true} label={config.submitLabel} />
+    <Button submit={true} label={config?.submitLabel || "Enviar"} />
 
   </>
 
