@@ -49,6 +49,7 @@ function Login() {
 
           <Input
             name="email"
+            label="Digite seu e-mail"
             required={true}
           />
 
@@ -60,14 +61,7 @@ function Login() {
             placeholder="Digite sua senha"
           />
 
-          <div className="d-grid gap-2 mx-auto ">
-            <button
-              type="submit"
-              className="btn btn-primary btn-lg"
-            >
-              Login
-            </button>
-          </div>
+          <Button submit label="Entrar" />
         </Form>
       </div>
       <Toast show={showToast} onClose={toggleToast} />
