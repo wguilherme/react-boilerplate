@@ -1,26 +1,35 @@
-import { useForm } from "react-hook-form";
+import Form from 'components/Form/useFormWithFields';
+import "./styles.scss"
+
 
 function Register() {
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm({})
+  const onSubmit = (formData: any) => console.log(formData)
 
-  const onSubmit = (data: any) => console.log(data)
 
-  console.log(watch("example"))
+  const fields: any = [
+    {
+      name: "email",
+      label: "Email",
+      placeholder: "Digite seu e-mail",
+      required: true
+    }]
+
+  const formConfig: any = {
+    submitLabel: "Registrar"
+  }
+
+
 
   return (
-    <div className="container">
-      <div className="form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input type="text" {...register("example")} />
-          <input type="text" {...register("exampleRequired", { required: true })} />
-          {errors.exampleRequired && <span>This field is required</span>}
-          <input type="submit" />
-        </form>
+    <div id="page-register" className="h-100">
+      <div className="form-container">
+        <h1>Olá, crie sua conta!</h1>
+        <h2>Preencha os dados abaixo para continuar</h2>
+        <Form onSubmit={onSubmit} fields={fields} config={formConfig} />
       </div>
     </div>
   )
 }
 
 export default Register
-

@@ -11,7 +11,8 @@ function Input(props: IInput) {
     placeholder,
     type = "string",
     autoComplete,
-    register
+    register,
+    ...rest
   } = props
 
   return (
@@ -23,9 +24,8 @@ function Input(props: IInput) {
         {...register(name)}
         className="form-control"
         placeholder={placeholder}
-        autoComplete={autoComplete === "off" ? "nope" : autoComplete
-
-        }
+        autoComplete={autoComplete === "off" ? "nope" : autoComplete}
+        {...rest}
       />
       <label htmlFor={name} > {label}</label>
     </div >

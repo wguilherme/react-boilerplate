@@ -2,7 +2,7 @@ import "./styles.scss"
 import { useForm } from "react-hook-form";
 
 import Input from 'components/Input/index';
-import { Button } from "components/Button";
+import Button from "components/Button";
 import Form from "components/Form/useForm";
 import auth from "services/auth";
 import api from "services/api";
@@ -49,10 +49,7 @@ function Login() {
 
           <Input
             name="email"
-            autoComplete="off"
-            type="text"
-            label="Digite seu e-mail"
-            placeholder="Digite seu e-mail"
+            required={true}
           />
 
           <Input
