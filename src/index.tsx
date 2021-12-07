@@ -9,14 +9,18 @@ import App from './App';
 
 import { ItemProvider } from './context/Item';
 
+import { ChakraProvider } from '@chakra-ui/react'
+
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback={<h1>Carregando...</h1>}>
       <ItemProvider>
-        <App />
+        <ChakraProvider>
+          <App />
+        </ChakraProvider>
       </ItemProvider>
     </Suspense>
-  </React.StrictMode>,
+  </React.StrictMode >,
   document.getElementById('root')
 );
 

@@ -3,7 +3,7 @@ import Input from 'components/Input/index';
 import Button from "components/Button";
 import Form from "components/Form/useForm";
 import InputSelect from '../../components/InputSelect';
-
+import { Button as CButton, ButtonGroup } from '@chakra-ui/react'
 
 function Lab() {
 
@@ -14,6 +14,10 @@ function Lab() {
       <div className="form-container">
         <h1>Olá, faça seus testes</h1>
         <h2>Preencha os dados abaixo para continuar</h2>
+
+
+
+        <CButton>Confirmar</CButton>
         <Form onSubmit={onSubmit} >
 
           <Input
