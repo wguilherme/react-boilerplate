@@ -1,5 +1,5 @@
 import "./styles.scss"
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 
 import Input from 'components/Input/index';
 import Button from "components/Button";
@@ -10,12 +10,14 @@ import { useHistory } from 'react-router-dom';
 
 // import ILogin from "./interface"
 import Toast from '../../components/Toast/index';
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 function Login() {
 
   const [showToast, setShowToast] = useState(false);
   const toggleToast = () => setShowToast(!showToast);
+
+
 
   const router = useHistory()
 
@@ -38,9 +40,11 @@ function Login() {
   }
 
   const onSubmit = (cretentials: any) => handleLogin(cretentials)
-  // console.log(watch("email"))
+
   return (
+
     <div id="page-login" className="w-100 h-100">
+
       <div className="form-container">
         <h1>Seja bem vindo (a)</h1>
         <h2>Acesse a plataforma com seu login e senha</h2>
@@ -65,6 +69,7 @@ function Login() {
         </Form>
       </div>
       <Toast show={showToast} onClose={toggleToast} />
+
     </div>
   )
 }

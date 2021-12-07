@@ -1,8 +1,6 @@
 import "./styles.scss"
 import IInput from "./inteface"
 
-import { useForm } from "react-hook-form";
-
 function Input(props: IInput) {
 
   const {
@@ -17,7 +15,7 @@ function Input(props: IInput) {
 
   return (
 
-    <div id="component-input" className="form-floating mb-4">
+    <div id="component-input-generic" className="form-floating mb-4">
       <input type={type}
         id={name}
         name={name}

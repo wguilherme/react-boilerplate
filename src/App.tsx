@@ -12,6 +12,7 @@ import Context from 'pages/context';
 import Login from 'pages/login';
 import Item from 'pages/item';
 import Dashboard from "pages/dashboard";
+import Lab from "pages/lab"
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
 
         <Route exact path="/context" component={Context} />
         <Route exact path="/item" component={Item} />
+
+        <Route exact path="/lab" component={Lab} />
       </Switch>
     </BrowserRouter>
   )
