@@ -21,9 +21,17 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "exclude": [
+    "node_modules",
+    "cypress"
+  ],
   "include": [
     "src",
     "src/context/Item/index.tsx",
-    "src/pages/register/index.tsx"
-, "src/stories/Button.stories.tsx", "src/pages/login/index.tsx"  ]
+    "src/pages/register/index.tsx",
+    "src/stories/Button.stories.tsx",
+    "src/pages/login/index.tsx",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
 }
