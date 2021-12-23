@@ -6,10 +6,13 @@
       "dom"
     ],
     "types": [
-      "cypress"
+      "cypress",
+      "@testing-library/cypress"
     ]
   },
   "include": [
-    "**/*.ts"
-, "integration/example.ts", "plugins/index.js"  ]
+    "**/*.ts",
+    "integration/example.ts",
+    "plugins/index.js"
+  ]
 }
